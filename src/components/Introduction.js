@@ -19,5 +19,5 @@ export default function Introduction() {
             </div>
             <img className='intro-img' alt='' src={introImg} object-fit="fit" />
         </div>
-    );
+    ) ;
 }

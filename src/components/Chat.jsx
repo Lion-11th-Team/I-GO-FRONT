@@ -65,6 +65,7 @@ const ChatBox = styled.div`
   width: 100%;
   height: 409px;
   background-color: rgba(245, 245, 245, 1);
+  overflow-y: auto;
 `;
 
 const MessageContainerWrapper = styled.div`
