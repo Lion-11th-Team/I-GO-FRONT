@@ -5,6 +5,7 @@ import arrow from '../img/arrow.png';
 import { useState, useEffect } from 'react';
 import GoBackBtn from './GoBackBtn';
 import KakaoMap from './KakaoMap';
+import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 
 export default function RegisterProgramInfo() {
@@ -61,6 +62,12 @@ export default function RegisterProgramInfo() {
         }
     }
     */
+    const movePage = useNavigate();
+
+    const submitRegister = () => {
+        alert("프로그램 등록이 완료되었습니다😊");
+        movePage('/');
+    }
 
 
     return (
@@ -143,7 +150,7 @@ export default function RegisterProgramInfo() {
             </DetailInfoContainer>
             <KakaoMap />
             <BtnContainer>
-                <EnrollBtn>등록하기</EnrollBtn>
+                <EnrollBtn onClick={submitRegister}>등록하기</EnrollBtn>
                 <GoBackBtn />
             </BtnContainer>
             <BottomBanner>
