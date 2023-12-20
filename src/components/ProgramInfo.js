@@ -10,8 +10,9 @@ export default function ProgramInfo({ isCarer }) {
   const location = useLocation();
   //const searchList = location.state.searchList;
 
-  /*
+
     const movePage = useNavigate();
+    /*
     const moveToSearchPage = () => {
         movePage('/program');
     }
@@ -54,6 +55,11 @@ export default function ProgramInfo({ isCarer }) {
   useEffect(() => {
     getProgram();
   }, []);
+
+  const submitApply = () => {
+    alert("신청이 완료되었습니다!😊");
+    movePage('/');
+  }
 
   return (
     <ProgramInfoContainer>
@@ -117,7 +123,7 @@ export default function ProgramInfo({ isCarer }) {
       </DetailInfoContainer>
       <KakaoMap address={address} />
       <BtnContainer>
-        {isCarer ? null : <EnrollBtn>신청하기</EnrollBtn>}
+        {isCarer ? null : <EnrollBtn onClick={submitApply}>신청하기</EnrollBtn>}
         {/*<BackToListBtn onClick={moveToSearchPage}>뒤로 가기</BackToListBtn>*/}
         <GoBackBtn />
       </BtnContainer>
