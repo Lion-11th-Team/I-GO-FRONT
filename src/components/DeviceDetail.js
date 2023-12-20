@@ -76,7 +76,7 @@ export default function DeviceDetail() {
             movePage("/");
         }
         catch (error) {
-            alert("전자기기 대여는 학생만 신청 가능합니다.");
+            alert("포인트가 부족합니다!😭");
             console.log("SubmitRental Error!");
         }
     }
