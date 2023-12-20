@@ -10,7 +10,7 @@ export default function Smartphone() {
   const getDevices = async () => {
     try {
       const response = await axios.get(
-        "/data/products.json",
+        "http://api.igoofficial.com/rental/",
         {
           //헤더
         }
