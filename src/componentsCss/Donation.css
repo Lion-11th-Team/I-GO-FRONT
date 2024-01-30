@@ -1,11 +1,13 @@
 .dona_home {
   padding: 140px 110px 210px 110px;
+  width: 100%;
 }
 
 .dona_container {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  width: 100%;
 }
 
 .dona_direction {
