@@ -24,12 +24,12 @@ export default function DeviceDetail() {
     const getDevice = async () => {
         try {
             const response = await axios.get(
-                "/data/products.json",
-                {
+                "http://api.igoofficial.com/rental/",
+                {/*
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("access-token")}`,
                     },
-                }
+                */}
             );
             console.log(response);
             console.log(response.data);
@@ -56,7 +56,7 @@ export default function DeviceDetail() {
     const submitRental = async () => {
         try {
             await axios.post(
-                "http://api.igoofficial.com/rental/:id/subscribe/",
+                `http://api.igoofficial.com/rental/${device.id}/subscribe/`,
                 {
                     addressee_name : addressee_name,
                     addressee_phone : addressee_phone,
@@ -72,11 +72,11 @@ export default function DeviceDetail() {
                     },
                 }
             );
-            alert("대여 신청이 완료되었습니다.");
+            alert("대여 신청이 완료되었습니다😊");
             movePage("/");
         }
         catch (error) {
-            alert("대여 신청에 문제가 발생하였습니다. 다시 시도해주시기 바랍니다.");
+            alert("포인트가 부족합니다!😭");
             console.log("SubmitRental Error!");
         }
     }

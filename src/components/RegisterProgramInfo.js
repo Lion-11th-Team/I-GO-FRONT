@@ -55,6 +55,12 @@ export default function RegisterProgramInfo() {
         }
     }
     */
+  const movePage = useNavigate();
+
+  const submitRegister = () => {
+    alert("프로그램 등록이 완료되었습니다😊");
+    movePage("/");
+  };
 
   return (
     <ProgramInfoContainer>
@@ -140,7 +146,7 @@ export default function RegisterProgramInfo() {
       </DetailInfoContainer>
       <KakaoMap />
       <BtnContainer>
-        <EnrollBtn>등록하기</EnrollBtn>
+        <EnrollBtn onClick={submitRegister}>등록하기</EnrollBtn>
         <GoBackBtn />
       </BtnContainer>
       <BottomBanner>

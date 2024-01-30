@@ -105,7 +105,7 @@ export default function MypageCarer() {
       getProfile();
       //리덕스에 user객체 store
       alert("수정이 완료되었습니다:)");
-      movePage("/mypageCarer");
+      movePage("/");
     } catch (error) {
       console.log("SubmitInfo Error!");
     }
